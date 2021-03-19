@@ -39,4 +39,4 @@ Next, please click the link corresponding to your operating system below which w
 * [Windows (64-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
 ## Train an Agent
-All of the relevant functionality and tools you will need to create and train the agents are available in this repository.  Please utilize the `run_reacher_main.py` file in order to run the training process.  If you would like to change any parameters to customize the training process, please update the relevant attributes in the function calls below the `if __name__ == '__main__':` block.
+All of the relevant functionality and tools you will need in order to initialize and train the agents are available in this repository.  Please utilize the `run_reacher_main.py` file in order to run the training process.  If you would like to change any parameters to personally customize training, please update the relevant attributes in the function calls below the `if __name__ == '__main__':` block.
