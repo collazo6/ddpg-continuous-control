@@ -3,9 +3,9 @@
 <br />
 
 <div align="center">
-  <img width="400" height="200" src="saved_files/untrained_agents.gif">
+  <img width="400" height="199.5" src="saved_files/untrained_agents.gif">
   &nbsp;&nbsp;&nbsp;
-  <img width="400" height="200" src="saved_files/trained_agents.gif">
+  <img width="400" height="199.5" src="saved_files/trained_agents.gif">
 </div>
 
 <br />
