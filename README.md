@@ -1,4 +1,4 @@
-# DDPG Continuous Control
+# Deep Deterministic Policy Gradient: Training Agents in Coninuous Action Space
 <div align="center">
   <img width="400" height="200" src="saved_files/untrained_agents.gif">
   &nbsp;&nbsp;&nbsp;
