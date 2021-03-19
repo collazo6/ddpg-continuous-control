@@ -11,7 +11,7 @@
 <br />
 
 <div align="center">
-  <img width="550" height="423" img src="saved_files/scores_mavg_qn_292.png">
+  <img width="550" height="423" img src="saved_files/scores_mavg_101.png">
 </div>
 
 <br />
