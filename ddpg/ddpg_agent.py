@@ -5,7 +5,7 @@ import numpy as np
 import random
 import torch
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 
 class Agent:
@@ -173,8 +173,8 @@ class ReplayBuffer:
         self.memory = deque(maxlen=buffer_size)
         self.batch_size = batch_size
         self.experience = namedtuple(
-            "Experience",
-            field_names=["state", "action", "reward", "next_state", "done"]
+            'Experience',
+            field_names=['state', 'action', 'reward', 'next_state', 'done']
         )
 
     def add(self, state, action, reward, next_state, done):

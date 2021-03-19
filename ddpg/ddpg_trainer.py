@@ -118,7 +118,7 @@ class DDPGTrainer:
         return scores
 
     def train_step(self):
-        """Initiates episode run and stores mean scores output."""
+        """Steps through each episode and stores mean scores output."""
 
         self.i_episode += 1
         scores = self.run_episode(self.max_episode_length)
@@ -146,19 +146,19 @@ class DDPGTrainer:
                 self.i_episode, self.get_running_mean_score()))
         else:
             print('\rEpisode {0}\tAverage Score: {1:.2f}'.format(
-                self.i_episode, self.get_running_mean_score()), end="")
+                self.i_episode, self.get_running_mean_score()), end='')
 
     def save(self):
         """Saves local network parameters for successful Actor and Critic."""
 
         torch.save(
             self.agent.actor_local.state_dict(),
-            f"{self.save_dir}/checkpoint_actor_{self.i_episode}.pth"
+            f'{self.save_dir}/checkpoint_actor_{self.i_episode}.pth'
         )
 
         torch.save(
             self.agent.critic_local.state_dict(),
-            f"{self.save_dir}/checkpoint_critic_{self.i_episode}.pth"
+            f'{self.save_dir}/checkpoint_critic_{self.i_episode}.pth'
         )
 
     def plt_mavg(self, window_size):
@@ -176,14 +176,14 @@ class DDPGTrainer:
 
         # Plot rolling averages and save resulting plot
         fig, ax = plt.subplots(figsize=(12, 9))
-        ax.plot(rolling_avgs, color='azure', linewidth=1.5)
+        ax.plot(rolling_avgs, color='paleturquoise', linewidth=1.5)
         ax.grid(color='w', linewidth=0.2)
         ax.set_title(
             f'Learning Curve: Deep Deterministic Policy Gradient',
-            fontsize=28
+            fontsize=30
         )
-        ax.set_xlabel('Episode', fontsize=18)
-        ax.set_ylabel('Score', fontsize=18)
+        ax.set_xlabel('Episode', fontsize=20)
+        ax.set_ylabel('Score', fontsize=20)
         plt.tight_layout()
         plt.savefig(rf'{self.save_dir}/scores_mavg_{self.i_episode}')
         plt.show()

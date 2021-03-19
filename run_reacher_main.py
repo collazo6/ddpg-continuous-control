@@ -1,15 +1,15 @@
 from ddpg.ddpg_agent import Agent, ReplayBuffer, GaussianNoise
 from unityagents.exception import UnityEnvironmentException
-from unityagents import UnityEnvironment
-from ddpg.ddpg_trainer import DDPGTrainer
 from ddpg.ddpg_model import Actor, Critic
+from ddpg.ddpg_trainer import DDPGTrainer
+from unityagents import UnityEnvironment
 from torch import optim
 import torch
 import time
 import sys
 import os
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 
 def load_env(env_loc):
@@ -52,7 +52,7 @@ def load_env(env_loc):
     num_agents = len(env_info.agents)
 
     # Display relevant environment information.
-    print("Number of agents: {}, state size: {}, action size: {}".format(
+    print('Number of agents: {}, state size: {}, action size: {}'.format(
         num_agents, state_size, action_size))
 
     return env, state_size, action_size
