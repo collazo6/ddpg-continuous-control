@@ -24,6 +24,8 @@ In the environment, states consist of `33` continuous variables that correspond 
 ## Results
 In the `saved_files` directory, you may find the saved model weights and learning curve plot for the successful Actor-Critic networks.  The trained agents, which you can see operating in the GIF above on the right, were able to solve the environment in just 101 episodes utilizing the DDPG training algorithm.  The graph below depicts the agent's performance over time in terms of relative score averaged over the past 5 episodes.
 
+<br />
+
 <div align="center">
   <img width="550" height="423" img src="saved_files/scores_mavg_101.png">
 </div>
