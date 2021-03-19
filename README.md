@@ -1,5 +1,8 @@
 # Deep Deterministic Policy Gradient: Training Agents in Continuous Action Space
 
+The Deep Deterministic Policy Gradient (DDPG) algorithm provides a highly effective solution to real world reinforcement problems dealing with continuous action spaces.
+
+
 <br />
 
 <div align="center">
