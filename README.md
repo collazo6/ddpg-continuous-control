@@ -5,8 +5,9 @@ Among the most exciting applications for Deep Reinforcement Learning is the impl
 
 ## Details
 
-The aim of the above implementation is to convey how Deep Reinforcement Learning may be utilized in training multiagent behavior.  Utilizing simulations of robotic arms, the agents are trained on their ability to remain inside of a desired location for as long as possible.
+The aim of the above implementation is to convey how Deep Reinforcement Learning may be utilized in training multiagent behavior.  As simulations of robotic arms, the agents are trained on their ability to remain inside of a desired location for as long as possible.
 
+This implementation utilizes the power of Actor-Critic networks which optimize a policy and value-based method simultaneously.  While the Actor network is in charge of choosing the best action based on optimizing the policy, the Critic then evaluates this prediction based on estimated value and suggests improvements to the Actor network.  Further optimization of training is realized through experience replay, where learning is initiated based on past experiences and their outcomes, as well as the use of Gaussian noise in order to reduce generalization error.
 
 <br />
 
