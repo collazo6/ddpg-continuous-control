@@ -22,7 +22,7 @@ In the environment, states consist of `33` continuous variables that correspond 
 <br />
 
 ## Results
-In the `saved_files` directory, you may find the saved model weights and learning curve plot for the successful Actor-Critic networks.  The trained agents, which you can see operating in the GIF above on the right, were able to solve the environment well before the 100 episode evaluation window was even completed utilizing the DDPG training algorithm.  The graph below depicts the agents' performance over time in terms of relative score averaged over the current and all previously evaluated episodes.
+In the `saved_files` directory, you may find the saved model weights and learning curve plot for the successful Actor-Critic networks.  The trained agents, which you can see operating in the GIF above on the right, were able to solve the environment within 70 episodes, well before the 100 episode evaluation window was even completed, utilizing the DDPG training algorithm.  The graph below depicts the agents' performance over time in terms of relative score averaged over the current and all previously evaluated episodes.
 
 <br />
 
@@ -41,4 +41,4 @@ Next, please click the link corresponding to your operating system below which w
 * [Windows (64-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
 ## Train an Agent
-All of the relevant functionality and tools you will need in order to initialize and train the agents are available in this repository.  Please utilize the `run_reacher_main.py` file in order to run the training process.  If you would like to change any parameters to personally customize training, please update the relevant attributes in the function calls below the `if __name__ == '__main__':` block.
+All of the relevant functionality and tools you will need in order to initialize and train the agents are available in this repository.  Please utilize the `run_reacher_main.py` file in order to run the training process.  If you would like to change any parameters to customize training, please update the relevant attributes in the function calls below the `if __name__ == '__main__':` block.
