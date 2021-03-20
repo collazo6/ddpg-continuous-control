@@ -172,16 +172,16 @@ class DDPGTrainer:
 
         # Plot cumulative moving averages and save resulting plot.
         fig, ax = plt.subplots(figsize=(12, 9))
-        ax.plot(x, y, color='paleturquoise', linewidth=1.5)
+        ax.plot(x, y, color='palegreen', linewidth=1.5)
         ax.grid(color='w', linewidth=0.2)
         ax.set_title(
             f'Learning Curve: Deep Deterministic Policy Gradient',
-            fontsize=29
+            fontsize=30
         )
-        ax.set_xlabel('Episode', fontsize=20)
-        plt.xticks(np.arange(0, np.max(x), 20), fontsize=8)
-        ax.set_ylabel('Score', fontsize=20)
-        plt.yticks(np.arange(0, np.max(y)+5, 5), fontsize=8)
+        ax.set_xlabel('Episode', fontsize=21)
+        plt.xticks(np.arange(0, np.max(x), 20), fontsize=10)
+        ax.set_ylabel('Score', fontsize=21)
+        plt.yticks(np.arange(0, np.max(y)+5, 5), fontsize=10)
         plt.tight_layout()
         plt.savefig(rf'{self.save_dir}/scores_mavg_{self.i_episode}')
         plt.show()
