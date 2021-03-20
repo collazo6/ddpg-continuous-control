@@ -211,7 +211,7 @@ def train_agents(env, trainer, n_episodes=300, target_score=30,
         # target score, plot training progress and save trainer
         if len(trainer.scores) > score_window_size and \
                 trainer.get_running_mean_score() > target_score:
-            trainer.plt_mavg(5)
+            trainer.plt_mavg()
             print('\nEnvironment is solved.')
             print('Saving trainer...')
             trainer.save()

@@ -161,29 +161,27 @@ class DDPGTrainer:
             f'{self.save_dir}/checkpoint_critic_{self.i_episode}.pth'
         )
 
-    def plt_mavg(self, window_size):
-        """Plots moving average score for the last window_size episodes."""
+    def plt_mavg(self):
+        """Plots cumulative moving average score by episode."""
 
-        # Calculate rolling averages based on the last window_size episodes.
-        rolling_avgs = pd.DataFrame(self.scores).rolling(window_size).mean()
+        # Initialize episode number values:
+        x = np.arange(1, len(self.scores)+1)
 
-        # Force index to start at 1 for 1st episode.
-        rolling_avgs.index += 1
+        # Calculate cumulative moving average values.
+        y = np.cumsum(self.scores) / x
 
-        # Set coordinates (episode, score) when agent solved env.
-        x = self.i_episode
-        y = rolling_avgs[0].iloc[-1]
-
-        # Plot rolling averages and save resulting plot
+        # Plot cumulative moving averages and save resulting plot.
         fig, ax = plt.subplots(figsize=(12, 9))
-        ax.plot(rolling_avgs, color='paleturquoise', linewidth=1.5)
+        ax.plot(x, y, color='paleturquoise', linewidth=1.5)
         ax.grid(color='w', linewidth=0.2)
         ax.set_title(
             f'Learning Curve: Deep Deterministic Policy Gradient',
-            fontsize=30
+            fontsize=29
         )
         ax.set_xlabel('Episode', fontsize=20)
+        plt.xticks(np.arange(0, np.max(x), 20), fontsize=8)
         ax.set_ylabel('Score', fontsize=20)
+        plt.yticks(np.arange(0, np.max(y)+5, 5), fontsize=8)
         plt.tight_layout()
         plt.savefig(rf'{self.save_dir}/scores_mavg_{self.i_episode}')
         plt.show()
