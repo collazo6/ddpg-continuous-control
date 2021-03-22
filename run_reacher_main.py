@@ -37,8 +37,7 @@ def load_env(env_loc):
         env = UnityEnvironment(file_name=p)
 
     except UnityEnvironmentException:
-        print('\n\nOperating System not supported.\n')
-        print('We apologize for any inconvenience.\n\n')
+        print('\nEnvironment not found or Operating System not supported.\n')
         sys.exit()
 
     # Extract state dimensionality from env.
