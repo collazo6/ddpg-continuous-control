@@ -61,7 +61,7 @@ def load_env(env_loc):
 def create_agent(state_size, action_size, seed=0, actor_fc1_units=400,
                  actor_fc2_units=300, actor_lr=1e-4, critic_fc1_units=400,
                  critic_fc2_units=300, critic_lr=1e-4, weight_decay=0,
-                 buffer_size=int(1e5), batch_size=128, gamma=0.99, tau=1e-3,
+                 buffer_size=int(1e5), batch_size=128, gamma=0.99, tau=0.1,
                  noise_dev=0.3):
     """
     This function creates an agent with specified parameters for training.
@@ -140,7 +140,7 @@ def create_agent(state_size, action_size, seed=0, actor_fc1_units=400,
     return agent
 
 
-def create_trainer(env, agent, update_frequency=1, num_updates=1,
+def create_trainer(env, agent, update_frequency=1, num_updates=5,
                    max_episode_length=1000, save_dir=r'./saved_files',
                    score_window_size=100):
     """
